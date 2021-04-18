@@ -5,7 +5,7 @@ Springboot appplication for a basic customer-product service
 application runs on port 8084
 
 * Deployment to docker
-Open the application directory, nevigate to the DockerFile
+Open the application directory, navigate to the DockerFile
 ------------------------------------------------------
 # build image
 
