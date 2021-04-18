@@ -5,7 +5,7 @@ Springboot appplication for a basic customer-product service
 application runs on port 8084
 
 * Deployment to docker
-Open the application directory, nevigate to the DockerFile
+Open the application directory, navigate to the DockerFile
 ------------------------------------------------------
 # build image
 
@@ -25,6 +25,8 @@ docker pull prom/prometheus
 run prometheus pointing at the prometheus.yml file inside the resource foulder
 docker run -p 9090:9090 –v /c:/user/myshop/src/main/resources/prometheus.yml prom/prometheus
 
-
-
+# H2 in memory database 
+--------------------------------------------------------------------
+ H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:shopify'
+ <host>:port/h2-ui
 
