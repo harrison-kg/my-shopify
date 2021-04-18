@@ -12,7 +12,7 @@
     <artifactId>myshop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>myshop</name>
+    <name>my-shopify</name>
     <description>technical assessment Momentum</description>
     <properties>
         <java.version>1.8</java.version>
