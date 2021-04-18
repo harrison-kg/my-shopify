@@ -31,9 +31,9 @@ public class MyShopController {
             extraTags = {"version","1.0"}
     )
     @GetMapping("/allproducts")
-    public ResponseEntity getAllProducts() {
+    public List getAllProducts() {
         final List<Product> allProducts = service.getAllProducts();
-        return ResponseEntity.ok(allProducts);
+        return allProducts;
     }
 
 

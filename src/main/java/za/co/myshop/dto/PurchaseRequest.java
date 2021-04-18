@@ -24,4 +24,13 @@ public class PurchaseRequest {
     public void setPrdCode(List<String> prdCode) {
         this.prdCode = prdCode;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("PurchaseRequest{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", prdCode=").append(prdCode);
+        sb.append('}');
+        return sb.toString();
+    }
 }

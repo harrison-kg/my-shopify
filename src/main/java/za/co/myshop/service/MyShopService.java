@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import za.co.myshop.controller.Response;
 import za.co.myshop.dto.PurchaseRequest;
 import za.co.myshop.entity.Customer;
 import za.co.myshop.entity.Product;
@@ -39,7 +40,7 @@ public class MyShopService {
                             if (byCode.isPresent()) {
                                 cost += byCode.get().getPointCost();
                             } else {
-                                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The customer chose a non-existent product code. (" + code + ")");
+                                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Response.UNKNOWN_PRODUCT_ID.getStatus() + code + ")");
                             }
                         }
                         if (customer.get().getActiveDays() >= cost) {
@@ -48,13 +49,13 @@ public class MyShopService {
                             return ResponseEntity.status(HttpStatus.OK).build();
 
                         }
-                            return ResponseEntity.status(HttpStatus.CONFLICT).body("The customer does not have enough points");
+                            return ResponseEntity.status(HttpStatus.CONFLICT).body(Response.INSUFFICIENT_POINTS.getStatus());
                     } else {
-                        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The customer did not provide any products to purchase.");
+                        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Response.NULL_PRODUCTS.getStatus());
                     }
                 }
             }
-             return  ResponseEntity.status(HttpStatus.NOT_FOUND).body( "The customer’s ID does not exist in the store.");
+             return  ResponseEntity.status(HttpStatus.NOT_FOUND).body( Response.UNKNOWN_CUSTOMER_ID.getStatus());
     }
 }
 

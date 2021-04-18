@@ -1,0 +1,10 @@
+curl --location --request GET 'http://localhost:8085/myshopify/allproducts'
+
+curl --location --request POST 'http://localhost:8085/myshopify/checkout' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"id": "2c91808278da905c0178da90829a0001",
+"prdCode": [
+"SNKR"
+]
+}'
