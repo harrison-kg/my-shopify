@@ -1,4 +1,4 @@
-package za.co.myshop.controller;
+package za.co.myshop.enums;
 
 public enum Response {
     UNKNOWN_CUSTOMER_ID("The customer’s ID does not exist in the store."),

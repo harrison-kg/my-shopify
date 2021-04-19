@@ -35,9 +35,9 @@ public class MyshopApplication implements CommandLineRunner {
         productList.forEach(n -> productRepository.save((Product) n));
 
         List customerList = new ArrayList();
-        customerList.add(new Customer("Simba", 20));
-        customerList.add(new Customer("Jake", 12));
-        customerList.add(new Customer("John", 5));
+        customerList.add(new Customer("2c91808278","Simba", 20));
+        customerList.add(new Customer("2c91808288","Jake", 12));
+        customerList.add(new Customer("2c91808270","John", 5));
 
         customerList.forEach(n -> customerRepository.save((Customer) n));
 
