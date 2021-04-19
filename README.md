@@ -24,6 +24,7 @@ docker pull prom/prometheus
 
 run prometheus pointing at the prometheus.yml file inside the resource foulder
 docker run -p 9090:9090 –v /c:/user/myshop/src/main/resources/prometheus.yml prom/prometheus
+endpoint http://localhost:9090/
 
 # H2 in memory database 
 --------------------------------------------------------------------
